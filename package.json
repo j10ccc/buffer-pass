@@ -1,0 +1,9 @@
+{
+  "name": "buffer-pass-monorepo",
+  "version": "0.0.1",
+  "description": "BufferPass is a self-hosted password manage tool",
+  "scripts": {},
+  "keywords": [],
+  "author": "j10ccc",
+  "license": "MIT"
+}
