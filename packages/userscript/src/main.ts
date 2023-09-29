@@ -1,4 +1,9 @@
 import { nanoid } from "nanoid";
+import Popover from "./components/popup";
+
+customElements.define("buffer-pass-popup", Popover);
+const popup = document.createElement("buffer-pass-popup") as Popover;
+document.body.appendChild(popup);
 
 function generatePassword() {
   return nanoid(12);
@@ -26,6 +31,7 @@ function takeOverPasswordElement() {
 
 function handleFocus(e: FocusEvent) {
   const element = e.target as HTMLInputElement;
+  popup.attachInput(element);
   if (isPasswordNeverVisit) {
     takeOverPasswordElement();
     isPasswordNeverVisit = false;
